@@ -2,7 +2,7 @@ project "assimp"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "On"
+	staticruntime "Off"
 	
     flags {
 		"MultiProcessorCompile"
@@ -114,16 +114,15 @@ project "assimp"
         "code/Common/**",
         "code/Material/**",
         "code/PostProcessing/**",
-    }
-
-    excludes { 
-        "code/Common/ZipArchiveIOSystem.cpp" 
+        "contrib/unzip/*",
+        "contrib/zlib/*",
     }
 
     sysincludedirs {
         ".",
         "contrib/pugixml/src",
         "contrib/unzip",
+        "contrib/zlib",
     }
 
     includedirs {
