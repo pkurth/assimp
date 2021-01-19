@@ -127,9 +127,12 @@ project "assimp"
 
     includedirs {
         "include",
-        "code"
+        "code",
     }
-	
+
+    disablewarnings {
+        "4996", -- The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name
+    }
 
     filter "system:windows"
         systemversion "latest"
