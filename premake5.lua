@@ -35,10 +35,6 @@ project "assimp"
         "ASSIMP_BUILD_NO_COB_IMPORTER",
         "ASSIMP_BUILD_NO_CSM_IMPORTER",
         "ASSIMP_BUILD_NO_DXF_IMPORTER",
-        "ASSIMP_BUILD_NO_GLTF_IMPORTER",
-        "ASSIMP_BUILD_NO_GLTF1_IMPORTER",
-        "ASSIMP_BUILD_NO_GLTF2_IMPORTER",
-        "ASSIMP_BUILD_NO_GLTF2_IMPORTER",
         "ASSIMP_BUILD_NO_HMP_IMPORTER",
         "ASSIMP_BUILD_NO_IFC_IMPORTER",
         "ASSIMP_BUILD_NO_IRR_IMPORTER",
@@ -116,6 +112,7 @@ project "assimp"
         "code/PostProcessing/**",
         "contrib/unzip/*",
         "contrib/zlib/*",
+        "contrib/Open3DGC/*",
     }
 
     sysincludedirs {
@@ -123,6 +120,8 @@ project "assimp"
         "contrib/pugixml/src",
         "contrib/unzip",
         "contrib/zlib",
+        "contrib/rapidjson/include",
+        "contrib",
     }
 
     includedirs {
